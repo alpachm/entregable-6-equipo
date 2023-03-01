@@ -10,20 +10,15 @@ const CartPage = ({ isCart, setIsCart }) => {
   const { cart } = useSelector((state) => state);
   const dispatch = useDispatch();
   const [totalPrice, setTotalPrice] = useState(0);
-  const [totalByItem, setTotalByItem] = useState(totalPrice);
 
   useEffect(() => {
     setTotalPrice(
-      totalByItem +
-        cart?.reduce(
-          (acc, cv) => acc + cv.quantity * Number(cv.product.price),
-          0
-        )
+      cart?.reduce((acc, cv) => acc + cv.quantity * Number(cv.product.price), 0)
     );
-  }, [cart, totalByItem]);
+  }, [cart]);
 
   /* console.log("total all items" + totalPrice);
-  console.log("total by item" + totalByItem); */
+  console.log("total by item" + totalByBundle); */
 
   const hideCart = () => {
     setIsCart(false);
@@ -56,8 +51,8 @@ const CartPage = ({ isCart, setIsCart }) => {
             <ProductsCart
               key={prod.id}
               prod={prod}
-              setTotalByItem={setTotalByItem}
-              totalByItem={totalByItem}
+              setTotalPrice={setTotalPrice}
+              totalPrice={totalPrice}
             />
           ))}
         </div>

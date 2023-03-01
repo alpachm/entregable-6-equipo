@@ -5,22 +5,23 @@ import config from "../../utils/config";
 import { useDispatch } from "react-redux";
 import { getProductsCartThunk } from "../../store/slices/cart.slice";
 
-const ProductsCart = ({ prod, setTotalByItem, totalByItem }) => {
+const ProductsCart = ({ prod, setTotalPrice, totalPrice }) => {
   const dispatch = useDispatch();
   const [counter, setCounter] = useState(prod.quantity);
   // const [totalPrice, setTotalPrice] = useState(parseInt(prod.product.price))
-  const [totalPrice, setTotalPrice] = useState(0);
+  const [totalPriceByBundle, setTotalPriceByBundle] = useState(0);
 
   const handleAdd = () => {
     setCounter(counter + 1);
     // setTotalPrice(totalPrice + parseInt(prod.product.price))
+    setTotalPrice(totalPrice + Number(prod.product.price));
   };
 
   const handleMinus = () => {
     if (counter > 1) {
       setCounter(counter - 1);
       // setTotalPrice(totalPrice - parseInt(prod.product.price))
-      setTotalPrice(Number(prod.product.price) - totalByItem);
+      setTotalPrice(totalPrice - Number(prod.product.price));
     }
   };
 
@@ -37,8 +38,7 @@ const ProductsCart = ({ prod, setTotalByItem, totalByItem }) => {
   };
 
   useEffect(() => {
-    setTotalPrice(Number(prod.product.price) * counter);
-    setTotalByItem(totalPrice);
+    setTotalPriceByBundle(Number(prod.product.price) * counter);
   }, [counter]);
 
   return (
@@ -58,7 +58,7 @@ const ProductsCart = ({ prod, setTotalByItem, totalByItem }) => {
       <footer>
         <div>
           <h4>Total</h4>
-          <p className="price">{totalPrice}</p>
+          <p className="price">{totalPriceByBundle}</p>
         </div>
       </footer>
     </div>
