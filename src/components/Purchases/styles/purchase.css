@@ -5,7 +5,7 @@
 
 .tittle__purchase {
     margin-left: 80px;
-    color: rgb(141, 138, 138);
+    color: rgb(134, 127, 127);
 }
 
 .box__purchases {
@@ -14,13 +14,12 @@
 }
 
 .purchase__card {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
-    gap: 7rem;
-    max-width: 600px;
+    gap: 1rem;
+    max-width: 800px;
     margin: 0 auto;
-    font-size: 0.8rem;
 }
 
 .purchase__img {
@@ -30,18 +29,32 @@
 }
 
 .quantity__purchase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: rgb(255, 38, 0);
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin-left: 50%;
+    border: 1px solid black;
+    width: 50px;
+    height: 40px;
+  
 }
 
 @media (max-width: 800px) {
     .purchase__card {
+        display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        align-items: center;
         text-align: center;
+        gap: 0.5rem;
     }
 
     .tittle__purchase {
         margin-left: 10px;
+    }
+
+    .quantity__purchase {
+        margin-left: 0;
     }
 }
