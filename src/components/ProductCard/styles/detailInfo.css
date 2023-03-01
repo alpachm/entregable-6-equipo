@@ -1,0 +1,60 @@
+.detail__info {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.detail__info span {
+    color: var(--grey-text-color);
+}
+
+.detail__info section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.detail__info section>div {
+    display: grid;
+    gap: .8rem;
+}
+
+
+.detail__info div:nth-child(1) h4 {
+    padding-left: 1rem;
+}
+
+.detail__info div:nth-child(2) div {
+    display: flex;
+    align-items: center;
+}
+
+.detail__info div:nth-child(2) div button,
+.detail__info div:nth-child(2) div p {
+    padding: 2px 15px;
+    font-size: 1.5rem;
+    border: 1px solid var(--grey-text-color);
+    background: none;
+    cursor: pointer;
+}
+
+.detail__info div:nth-child(2) div p {
+    cursor: default;
+    padding: 2px 30px;
+}
+
+.detail__info>button {
+    padding: .7rem 0;
+    font-size: 1.5rem;
+    background: var(--orange);
+    border: none;
+    color: var(--white);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.detail__info>button i {
+    color: var(--white);
+}

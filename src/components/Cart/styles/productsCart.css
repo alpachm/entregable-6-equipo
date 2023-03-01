@@ -1,0 +1,73 @@
+.products__card {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.products__card header {
+    display: grid;
+    grid-template-columns: .5fr 1fr .3fr;
+    gap: 1rem;
+}
+
+.products__card header img {
+    object-fit: contain;
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.products__card section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: auto 0;
+}
+
+.products__card section div {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.products__card section div button,
+.products__card section div p {
+    padding: 2px 15px;
+    font-size: 1.5rem;
+    border: 1px solid var(--grey-text-color);
+    background: none;
+    cursor: pointer;
+}
+
+.products__card section div p {
+    cursor: default;
+}
+
+.products__card header>i {
+    font-size: 2rem;
+    color: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.products__card footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.products__card footer div {
+    display: flex;
+    gap: 1rem;
+}
+
+.products__card footer div h4 {
+    color: var(--grey-text-color);
+    font-weight: 400;
+}
+
+.products__card footer div p {
+    font-weight: bold;
+}

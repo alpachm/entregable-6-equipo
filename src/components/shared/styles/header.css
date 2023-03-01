@@ -1,0 +1,115 @@
+.headerPage {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: var(--position-index-fourth);
+
+    background: var(--white);
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.content__headerPage {
+    width: 95%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content__headerPage>a {
+    text-decoration: none;
+}
+
+.content__headerPage>a h1 {
+    color: var(--orange);
+}
+
+.content__headerPage>i {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.content__headerPage nav {
+    position: fixed;
+    bottom: 0;
+    right: -200%;
+    width: 100%;
+    height: calc(100vh - 60px);
+    z-index: var(--position-index-fourth);
+    background: var(--white);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: right .2s;
+}
+
+.content__headerPage .show__menuMobile {
+    right: 0;
+}
+
+.content__headerPage nav ul {
+    display: grid;
+    gap: 2rem;
+}
+
+.content__headerPage nav ul li {
+    list-style: none;
+}
+
+.content__headerPage nav ul li a {
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+@media (min-width: 790px) {
+    .content__headerPage>i {
+        display: none;
+    }
+
+    .content__headerPage nav {
+        position: static;
+        height: auto;
+        width: auto;
+        background: none;
+    }
+
+    .content__headerPage nav ul {
+        display: flex;
+        gap: 0;
+    }
+
+    .content__headerPage nav ul li {
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 2.5rem;
+        cursor: pointer;
+    }
+
+    .content__headerPage nav ul li:nth-child(1) {
+        border-left: 1px solid var(--border-color);
+    }
+
+    .content__headerPage nav ul li:nth-child(2) {
+        border-left: 1px solid var(--border-color);
+        border-right: 1px solid var(--border-color);
+    }
+
+    .content__headerPage nav ul li:nth-child(3) {
+        border-left: none;
+        border-right: none;
+    }
+
+    .content__headerPage nav ul li a {
+        font-size: 1.5rem;
+    }
+}

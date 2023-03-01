@@ -1,0 +1,17 @@
+.sideBar {
+    padding-top: 1rem;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sideBar ul li {
+    list-style: none;
+}
+
+@media (min-width: 990px) {
+    .sideBar {
+        display: flex;
+    }
+}

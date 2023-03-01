@@ -1,0 +1,45 @@
+.register__page {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--light-white);
+}
+
+.register__page form {
+    display: grid;
+    gap: 1rem;
+
+    background: var(--white);
+    padding: 2rem 1rem;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    border: 1px solid var(--border-color);
+}
+
+.register__page form div {
+    display: grid;
+    gap: .3rem;
+}
+
+.register__page form input,
+.register__page form button {
+    height: 40px;
+    padding: 0 1rem;
+}
+
+.register__page form button {
+    background: var(--orange);
+    border: none;
+    font-weight: bold;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.register__page form>p a {
+    color: blue;
+    text-decoration: none;
+}

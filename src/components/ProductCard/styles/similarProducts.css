@@ -1,0 +1,29 @@
+.similar__products {
+    padding: 3rem 0;
+}
+
+.similar__products h3 {
+    color: var(--orange);
+}
+
+.box__similarProducts {
+    display: grid;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@media (min-width: 680px) {
+
+    .box__similarProducts {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .box__similarProducts {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}

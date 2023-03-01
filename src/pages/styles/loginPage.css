@@ -1,0 +1,82 @@
+.login__page {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--light-white);
+}
+
+.login__page form {
+    display: grid;
+    gap: 1rem;
+
+    background: var(--white);
+    padding: 2rem 1rem;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    border: 1px solid var(--border-color);
+}
+
+.login__page form div {
+    display: grid;
+    gap: .3rem;
+}
+
+.login__page form input,
+.login__page form button {
+    height: 40px;
+    padding: 0 1rem;
+}
+
+.login__page form button {
+    background: var(--orange);
+    border: none;
+    font-weight: bold;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.login__page form>p a {
+    color: blue;
+    text-decoration: none;
+}
+
+.card__userLogin {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--light-white);
+}
+
+.card__userLogin div {
+    display: grid;
+    gap: 1rem;
+
+    background: var(--white);
+    padding: 2rem 1rem;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.card__userLogin div img {
+    width: 100px;
+    margin: auto;
+}
+
+.card__userLogin div button {
+    height: 40px;
+    background: var(--orange);
+    border: none;
+    font-weight: bold;
+    color: var(--white);
+    cursor: pointer;
+}
