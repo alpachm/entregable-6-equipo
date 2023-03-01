@@ -5,7 +5,7 @@ import config from "../../utils/config";
 import { useDispatch } from "react-redux";
 import { getProductsCartThunk } from "../../store/slices/cart.slice";
 
-const ProductsCart = ({ prod }) => {
+const ProductsCart = ({ prod, setTotalByItem, totalByItem }) => {
   const dispatch = useDispatch();
   const [counter, setCounter] = useState(prod.quantity);
   // const [totalPrice, setTotalPrice] = useState(parseInt(prod.product.price))
@@ -20,6 +20,7 @@ const ProductsCart = ({ prod }) => {
     if (counter > 1) {
       setCounter(counter - 1);
       // setTotalPrice(totalPrice - parseInt(prod.product.price))
+      setTotalPrice(Number(prod.product.price) - totalByItem);
     }
   };
 
@@ -37,6 +38,7 @@ const ProductsCart = ({ prod }) => {
 
   useEffect(() => {
     setTotalPrice(Number(prod.product.price) * counter);
+    setTotalByItem(totalPrice);
   }, [counter]);
 
   return (
