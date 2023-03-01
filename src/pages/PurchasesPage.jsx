@@ -19,7 +19,7 @@ const PurchasesPage = () => {
 
     return (
         <div className='purchase__page padding__top'>
-            <h1>PurchasesPage</h1>
+            <h1 className='tittle__purchase'>My purchases</h1>
 
             <div className="box__purchases">
                 {

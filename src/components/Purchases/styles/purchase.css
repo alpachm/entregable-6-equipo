@@ -1,0 +1,47 @@
+.purchase__page {
+    display: grid;
+    gap: 5rem;
+}
+
+.tittle__purchase {
+    margin-left: 80px;
+    color: rgb(141, 138, 138);
+}
+
+.box__purchases {
+    display: grid;
+    gap: 4rem;
+}
+
+.purchase__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7rem;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0.8rem;
+}
+
+.purchase__img {
+    
+    width: 60px;
+    max-height: 100px;
+}
+
+.quantity__purchase {
+    color: rgb(255, 38, 0);
+    font-size: 1rem;
+}
+
+@media (max-width: 800px) {
+    .purchase__card {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .tittle__purchase {
+        margin-left: 10px;
+    }
+}
