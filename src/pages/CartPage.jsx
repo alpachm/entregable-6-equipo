@@ -44,7 +44,7 @@ const CartPage = ({ isCart, setIsCart }) => {
             cart?.map(prod => (
               <ProductsCart
                 key={prod.id}
-                prod={prod}
+                prod={prod}        
               />
             ))
           }

@@ -9,6 +9,7 @@ const ProductsCart = ({ prod }) => {
   const dispatch = useDispatch();
   const [counter, setCounter] = useState(prod.quantity);
   // const [totalPrice, setTotalPrice] = useState(parseInt(prod.product.price))
+
   const [totalPrice, setTotalPrice] = useState(0);
 
   const handleAdd = () => {
@@ -19,7 +20,7 @@ const ProductsCart = ({ prod }) => {
   const handleMinus = () => {
     if (counter > 1) {
       setCounter(counter - 1);
-      // setTotalPrice(totalPrice - parseInt(prod.product.price))
+       //setTotalPrice(totalPrice - parseInt(prod.product.price))
     }
   };
 
