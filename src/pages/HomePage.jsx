@@ -11,8 +11,9 @@ const HomePage = () => {
   const dispatch = useDispatch()
 
   const [fromTo, setFromTo] = useState({
-    from:0,
-    to: Infinity})
+    from: 0,
+    to: Infinity
+  })
 
 
   const handleSubmit = e => {
@@ -29,18 +30,21 @@ const HomePage = () => {
     e.preventDefault()
     const from = +e.target.from.value.trim()
     const to = +e.target.to.value.trim()
-    
-    if(from && to){
-      setFromTo({from, to})
-    } else if(from && !to){
-      setFromTo({from, to: Infinity})
-    }else if(!from && to){
-      setFromTo({from: 0, to})
-    }else {
-      setFromTo({from: 0, to: Infinity})
+
+    if (from && to) {
+      setFromTo({ from, to })
+    } else if (from && !to) {
+      setFromTo({ from, to: Infinity })
+    } else if (!from && to) {
+      setFromTo({ from: 0, to })
+    } else {
+      setFromTo({ from: 0, to: Infinity })
     }
+
+    e.target.from.value = ''
+    e.target.to.value = ''
   }
-  
+
   const filterProduct = product => +product.price >= fromTo.from && +product.price <= fromTo.to
 
 
@@ -48,7 +52,7 @@ const HomePage = () => {
   return (
     <div className='home__page'>
 
-<article className='content__category'>
+      <article className='content__category'>
         <header className='header__category'>
           <h3>Price</h3>
           <i className='bx bx-chevron-down'></i>
@@ -56,23 +60,23 @@ const HomePage = () => {
         <hr />
         <form onSubmit={handleSubmitPrice}>
           <div className='content__input-filter'>
-          <label htmlFor="from">From</label>
-          <input type="number" id='from' />
+            <label htmlFor="from">From</label>
+            <input type="number" id='from' />
           </div>
           <div className='content__input-filter'>
-          <label htmlFor="to">To</label>
-          <input type="number" id='to' />
+            <label htmlFor="to">To</label>
+            <input type="number" id='to' />
           </div>
           <button className='btn__filter-price'>Filter Price</button>
         </form>
         <div>
-        <SideBar />
+          <SideBar />
         </div>
-        
+
       </article>
 
 
-      
+
 
       <div className="content__homePage">
 
@@ -84,14 +88,14 @@ const HomePage = () => {
         <div className='content__products-home'>
           {
             products?.length === 0 ?
-            <h1>X This product does'n exist X</h1>
-          :
-            products?.filter(filterProduct).map(product => (
-              <ProductCard 
-                key={product.id} 
-                product={product}
-              />
-            ))
+              <h1>X This product does'n exist X</h1>
+              :
+              products?.filter(filterProduct).map(product => (
+                <ProductCard
+                  key={product.id}
+                  product={product}
+                />
+              ))
           }
         </div>
       </div>
