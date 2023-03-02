@@ -3,7 +3,7 @@
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
-
+    
     position: relative;
 
     transition: box-shadow 50ms, transform 50ms;

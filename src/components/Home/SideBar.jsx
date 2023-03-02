@@ -21,12 +21,16 @@ const SideBar = () => {
         dispatch(getProductsByNameThunk(id, true))
     }
 
+
+
     return (
         <div className='sideBar'>
-            <header>
+
+            <header className='content__icon-sideBar'>
                 <h3>Category</h3>
                 <i className='bx bx-chevron-down'></i>
             </header>
+            <hr />
             <ul>
                 {
                     categories?.map(category => (
